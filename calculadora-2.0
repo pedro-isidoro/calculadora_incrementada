@@ -1,0 +1,464 @@
+#include <stdio.h>
+#include <math.h>
+#define Pi 3.1416
+//Calculadora
+
+void soma(){
+	int qtd, res=0;
+	printf("==================================================\n");
+	printf("Digite o numero de valores que gostaria de somar: ");
+	fflush(stdout);
+	scanf("%d", &qtd);
+
+    float vet[qtd];
+	for(int i = 0; i < qtd; i++){
+	printf("Digite o %d° numero: ", (i+1));
+	fflush(stdout);
+	scanf("%f", &vet[i]);
+	}
+	for(int i = 0; i < qtd; i++){
+		res = res + vet[i];
+	}
+	printf("Valores = ");
+	for(int i = 0; i < qtd; i++){
+		printf("| %.1f ", vet[i]);
+	}
+	printf("\nA soma dos valores é: %d\n", res);
+}
+void subtracao(){
+	float n1, n2, res = 0;
+	printf("==================================================\n");
+	printf("Digite o valor que gostaria de subtrair: ");
+	fflush(stdout);
+	scanf("%f", &n1);
+
+	printf("Agora digite qual deve subitraílo: ");
+	fflush(stdout);
+	scanf("%f", &n2);
+
+	res = n1 - n2;
+	printf("A subtração de %.2f e %.2f = %.2f\n", n1, n2, res);
+}
+void divisao(){
+	float n1, n2, res = 0;
+	printf("==================================================\n");
+	printf("Digite o valor que gostaria de dividir: ");
+	fflush(stdout);
+	scanf("%f", &n1);
+
+	printf("Agora digite qual deve dividilo: ");
+	fflush(stdout);
+	scanf("%f", &n2);
+
+	res = n1 / n2;
+	printf("Fórmula: ");
+	printf("%.2f / %.2f\n", n1, n2);
+	printf("A divisão de %.2f e %.2f = %.2f\n", n1, n2, res);
+}
+void multiplicacao(){
+	int qtd, res=1;
+	printf("==================================================\n");
+	printf("Digite o numero de valores que gostaria de multiplicar: \n");
+	fflush(stdout);
+	scanf("%d", &qtd);
+
+	float vet[qtd];
+	for(int i = 0; i < qtd; i++){
+	printf("Digite o %d° numero: ", (i+1));
+	fflush(stdout);
+	scanf("%f", &vet[i]);
+	}
+	for(int i = 0; i < qtd; i++){
+		res = res * vet[i];
+	}
+	printf("Valores = ");
+	for(int i = 0; i < qtd; i++){
+	printf("| %.1f ", vet[i]);
+	}
+	printf("\nA multiplicação dos valores é: %d\n", res);
+}
+void radiciacao(){
+	float n, res = 0;
+	printf("==================================================\n");
+	printf("Digite o valor: ");
+	fflush(stdout);
+	scanf("%f", &n);
+
+    res = sqrt(n);
+	printf("A raiz de %.1f = %.2f\n", n, res);
+}
+void potenciacao(){
+	float n1, n2, res = 0;
+	printf("==================================================\n");
+	printf("Digite o valor que gostaria de elevar a potência: ");
+	fflush(stdout);
+	scanf("%f", &n1);
+
+	printf("Agora digite qual o valor da potência: ");
+	fflush(stdout);
+	scanf("%f", &n2);
+
+	res = pow(n1, n2);
+	printf("Fórmula: ");
+	printf("%.1f elevado à %.1f\n", n1, n2);
+	printf("O %.1f elevado à %.1f = %.2f\n", n1, n2, res);
+}
+void media(){
+	int qtd;
+	float soma = 0, media = 0;
+	printf("==================================================\n");
+	printf("Digite a quantidade de valores: ");
+	fflush(stdout);
+	scanf("%d", &qtd);
+
+    float vet[qtd];
+	for(int i = 0; i < qtd; i++){
+	printf("Digite o %d° numero: ", (i+1));
+	fflush(stdout);
+	scanf("%f", &vet[i]);
+	}
+	for(int i = 0; i < qtd; i++){
+		soma = soma + vet[i];
+	}
+	media = soma / qtd;
+	printf("Fórmula: ");
+	printf("média = soma dos valores / quantidade\n");
+	printf("Valores = ");
+	for(int i = 0; i < qtd; i++){
+		printf("| %.1f ", vet[i]);
+	}
+	printf("\nA média é: %.2f\n", media);
+}
+void c_f(){
+	float c, f;
+	printf("==================================================\n");
+	printf("Digite a temperatura em °C: ");
+	fflush(stdout);
+	scanf("%f", &c);
+
+	f = c * 9 / 5 + 32;
+	printf("Fórmula: ");
+	printf("f = c * 9 / 5 + 32\n");
+	printf("%.2f°C em fahrenheit = %.2f°F\n", c,f);
+}
+void c_k(){
+	float c, k;
+	printf("==================================================\n");
+	printf("Digite a temperatura em °C: ");
+	fflush(stdout);
+	scanf("%f", &c);
+
+    k = c + 273.15;
+	printf("Fórmula: ");
+	printf("°C + 273.15\n");
+	printf("%.2f°C em Kelvin = %.2fK\n", c, k);
+}
+void f_c(){
+	float f, c;
+	printf("==================================================\n");
+	printf("Digite a temperatura em °F: ");
+	fflush(stdout);
+	scanf("%f", &f);
+
+	c = (f - 32) * 5 / 9;
+	printf("Fórmula: ");
+	printf("c = (f - 32) * 5 / 9\n");
+	printf("%.2f°F em Celsius = %.2f°C\n", f,c);
+}
+void f_k(){
+	float f, k;
+	printf("==================================================\n");
+	printf("Digite a temperatura em °F: ");
+	fflush(stdout);
+	scanf("%f", &f);
+
+	k = (f - 32) * 5 / 9 + 273.15;
+	printf("Fórmula: ");
+	printf("c = (f - 32) * 5 / 9 + 273.15\n");
+	printf("%.2f°F em Kelvin = %.2f°C\n", f,k);
+}
+void k_c(){
+	float k, c;
+	printf("==================================================\n");
+	printf("Digite a temperatura em K: ");
+	fflush(stdout);
+	scanf("%f", &k);
+
+	c = k - 273.15;
+	printf("Fórmula: ");
+	printf("c = k - 273.15\n");
+	printf("%.2fK em Celsius = %.2f°C\n", k, c);
+}
+void k_f(){
+	float k, f;
+	printf("==================================================\n");
+	printf("Digite a temperatura em K: ");
+	fflush(stdout);
+	scanf("%f", &k);
+
+	f = (k - 273.15) * 9/5 + 32;
+	printf("Fórmula: ");
+	printf("f = (k - 273.15) * 9/5 + 32\n");
+	printf("%.2fK em fahrenheit = %.2f°F\n", k, f);
+}
+void quadratica(){
+	double a, b, c, x1, x2, delta;
+	printf("==================================================\n");
+	printf("Digite o valor do coeficiente a:");
+	fflush(stdout);
+	scanf("%lf", &a);
+
+	printf("Digite o valor do coeficiente b:");
+	fflush(stdout);
+	scanf("%lf", &b);
+
+	printf("Digite o valor do coeficiente c:");
+	fflush(stdout);
+	scanf("%lf", &c);
+
+	printf("\nEquação = ");
+	printf("ax² + bx + c\n");
+
+	delta = pow(b,2) - (4 * a * c);
+	printf("\nFórmula do Delta: \n");
+	printf("Delta = b² - 4 * a * c\n");
+	printf("Delta = %.1lf\n", delta);
+
+	if(delta > 0){
+		printf("\nFórmula de X1: \n");
+		printf("X1 = -b + raiz de Delta / 2 * a\n");
+
+		x1 = (-b + sqrt(delta))/ (2 * a);
+		printf("%.4lf\n", x1);
+
+		printf("X2 = -b - raiz de Delta / 2 * a\n");
+		x2 = (-b - sqrt(delta)) / (2 * a);
+		printf("%.4lf\n", x2);
+
+		printf("\nSolução: ");
+		printf("S{%.4lf, %.4lf}\n", x1, x2);
+	}else if(delta == 0){
+		printf("X1 = X2, logo X\n");
+		printf("\nFórmula de X: \n");
+		printf("X = -b + raiz de Delta / 2 * a\n");
+
+		x1 = (-b + sqrt(delta)) / (2 * a);
+		printf("%.2lf\n", x1);
+
+		printf("\nSolução: ");
+		printf("S{%.2lf}\n", x1);
+	}else{
+		printf("Essa equação não possui raízes reais!\n");
+	}
+}
+void sen(){
+	double x, seno;
+	printf("==================================================\n");
+	printf("Digite o ângulo: ");
+	fflush(stdout);
+	scanf("%lf", &x);
+
+	seno = sin(x * Pi / 180);
+	printf("O Seno de %.2lf° é %.3lf\n", x, seno);
+}
+void coss(){
+	double x, cosseno = 0;
+	printf("==================================================\n");
+	printf("Digite o ângulo: ");
+	fflush(stdout);
+	scanf("%lf", &x);
+
+	cosseno = cos(x * Pi / 180);
+	printf("O Cosseno de %.2lf° é %.3lf\n", x, cosseno);
+}
+void tang(){
+	double x, tangente = 0;
+	printf("==================================================\n");
+	printf("Digite o ângulo: ");
+	fflush(stdout);
+	scanf("%lf", &x);
+
+	tangente = tan(x * Pi / 180);
+	printf("A Tangente de %.2lf° é %.3lf\n", x, tangente);
+}
+void log_10(){
+	double x, lg10;
+	printf("==================================================\n");
+	printf("Digite o número: ");
+	fflush(stdout);
+	scanf("%lf", &x);
+
+	lg10 = log10(x);
+	printf("Equação: ");
+	printf("Log10(x)\n");
+	printf("O Logaritmo de %.2lf é %.3lf\n", x, lg10);
+}
+void log_n(){
+	double x, lgn;
+	printf("==================================================\n");
+	printf("Digite o número: ");
+	fflush(stdout);
+	scanf("%lf", &x);
+
+	lgn = log(x);
+	printf("Equação: ");
+	printf("Ln (x)\n");
+	printf("O Logaritmo Natural de %.2lf é %.3lf\n", x, lgn);
+}
+void menu_3(){
+	int opcao;
+	printf("==================================================\n");
+	printf("================ Calculadora Pt3 ================\n");
+	printf("==================================================\n");
+	printf("Escolha uma opção de Operação:\n"
+			"[1] - Seno\n[2] - Cosseno\n"
+			"[3] - Tangente\n[4] - Logaritmo na base 10\n"
+			"[5] - Logaritimo Natural\n[0] - Sair\n");
+	fflush(stdout);
+	scanf("%d", &opcao);
+
+	switch (opcao){
+	case 1:
+		sen(); //chama a função void sen
+		menu_3(); //chama a função void menu_3
+		break;
+	case 2:
+		coss(); //chama a função void coss
+		menu_3(); //chama a função void menu_3
+		break;
+	case 3:
+        tang(); //chama a função void tang
+		menu_3(); //chama a função void menu_3
+		break;
+	case 4:
+		log_10(); //chama a função void log_10
+		menu_3(); //chama a função void menu_3
+		break;
+	case 5:
+		log_n(); //chama a função log_n
+		menu_3(); //chama a função void menu_3
+		break;
+	case 0:
+		printf("======== Obrigado por usar a calculadora! ========\n");
+		printf("==================================================\n");
+		break;
+	default:
+		printf("Opção Inválida!!\n");
+		menu_3(); //chama a função void menu_3
+		break;
+	}
+}
+void menu_2(){
+	int opcao;
+	printf("==================================================\n");
+	printf("================ Calculadora Pt2 ================\n");
+	printf("==================================================\n");
+	printf("Escolha uma opção de Operação:\n"
+			"[1] - Celsius -> Fahrenheit\n[2] - Celsius -> Kelvin\n"
+			"[3] - Fahrenheit -> Celsius\n[4] - Fahrenheit -> Kelvin\n"
+			"[5] - Kelvin -> Celsius\n[6] - Kelvin -> Fahrenheit\n"
+			"[7] - Fórmula Quadrática (Bhaskara)\n[8] - Menu 3\n"
+			"[0] - Sair\n");
+	fflush(stdout);
+	scanf("%d", &opcao);
+
+	switch (opcao){
+	case 1:
+		c_f(); //chama a função void c_f
+		menu_2(); //chama a função void menu_2
+		break;
+    case 2:
+		c_k(); //chama a função void c_k
+		menu_2(); //chama a função void menu_2
+		break;
+    case 3:
+    	f_c(); //chama a função void f_c
+    	menu_2(); //chama a função void menu_2
+    	break;
+	case 4:
+		f_k(); //chama a função void f_k
+		menu_2(); //chama a função void menu_2
+		break;
+	case 5:
+		k_c();
+		break;
+	case 6:
+		k_f();
+		break;
+	case 7:
+		quadratica(); //chama a função void quadratica
+		menu_2(); //chama a função void menu_2
+		break;
+	case 8:
+		menu_3(); //chama a função void menu_3
+		break;
+	case 0:
+		printf("======== Obrigado por usar a calculadora! ========\n");
+		printf("==================================================\n");
+		break;
+	default:
+		printf("Opção Inválida!!\n");
+		menu_2(); //chama a função void menu_2
+		break;
+	}
+}
+void menu(){
+	int opcao;
+	printf("==================================================\n");
+	printf("================== Calculadora ==================\n");
+	printf("==================================================\n");
+	printf("Escolha uma opção de Operação:\n"
+			"[1] - Soma\n[2] - Subtração\n[3] - Divisão\n"
+			"[4] - Multiplicação\n[5] - Radiciação\n"
+			"[6] - Potenciação\n[7] - Média\n"
+			"[8] - Menu 2\n[0] - Sair\n");
+	fflush(stdout);
+	scanf("%d", &opcao);
+
+
+	switch (opcao){
+	case 1:
+		soma(); //chama a função void soma
+		menu(); //chama a função void menu
+		break;
+	case 2:
+		subtracao(); //chama a função void subtracao
+		menu(); //chama a função void menu
+		break;
+	case 3:
+		divisao(); //chama a função void divisao
+		menu(); //chama a função void menu
+		break;
+	case 4:
+		multiplicacao(); //chama a função void multiplicacao
+		menu(); //chama a função void menu
+		break;
+	case 5:
+	  radiciacao(); //chama a função void radiciacao
+	  menu(); //chama a função void menu
+	  break;
+	case 6:
+		potenciacao(); //chama a função void potenciacao
+		menu(); //chama a função void menu
+		break;
+	case 7:
+		media(); //chama a função void media
+		menu(); //chama a função void menu
+		break;
+	case 8:
+		menu_2(); //chama a função void menu_2
+		break;
+	case 0:
+		printf("======== Obrigado por usar a calculadora! ========\n");
+		printf("==================================================\n");
+		break;
+	default:
+		printf("Opção Inválida!!\n");
+		menu(); //chama a função void menu
+		break;
+	}
+}
+int main(){
+	menu(); //chama a função void menu
+  return 0;
+}
