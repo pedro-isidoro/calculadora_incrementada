@@ -367,23 +367,25 @@ void menu_2(){
 		c_f(); //chama a função void c_f
 		menu_2(); //chama a função void menu_2
 		break;
-    case 2:
+        case 2:
 		c_k(); //chama a função void c_k
 		menu_2(); //chama a função void menu_2
 		break;
-    case 3:
-    	f_c(); //chama a função void f_c
-    	menu_2(); //chama a função void menu_2
-    	break;
+        case 3:
+    	        f_c(); //chama a função void f_c
+    	        menu_2(); //chama a função void menu_2
+    	        break;
 	case 4:
 		f_k(); //chama a função void f_k
 		menu_2(); //chama a função void menu_2
 		break;
 	case 5:
-		k_c();
+		k_c(); //chama a função void k_c
+		menu_2(); //chama a função void menu_2
 		break;
 	case 6:
-		k_f();
+		k_f(); //chama a função void k_f
+		menu_2(); //chama a função void menu_2
 		break;
 	case 7:
 		quadratica(); //chama a função void quadratica
@@ -434,9 +436,9 @@ void menu(){
 		menu(); //chama a função void menu
 		break;
 	case 5:
-	  radiciacao(); //chama a função void radiciacao
-	  menu(); //chama a função void menu
-	  break;
+	        radiciacao(); //chama a função void radiciacao
+	        menu(); //chama a função void menu
+	        break;
 	case 6:
 		potenciacao(); //chama a função void potenciacao
 		menu(); //chama a função void menu
@@ -459,6 +461,6 @@ void menu(){
 	}
 }
 int main(){
-	menu(); //chama a função void menu
-  return 0;
+    menu(); //chama a função void menu
+    return 0;
 }
