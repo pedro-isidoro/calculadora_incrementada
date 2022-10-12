@@ -204,6 +204,9 @@ void k_f(){
 void quadratica(){
 	double a, b, c, x1, x2, delta;
 	printf("==================================================\n");
+	printf("\nEquação = ");
+	printf("ax² + bx + c\n");
+
 	printf("Digite o valor do coeficiente a:");
 	fflush(stdout);
 	scanf("%lf", &a);
@@ -215,9 +218,6 @@ void quadratica(){
 	printf("Digite o valor do coeficiente c:");
 	fflush(stdout);
 	scanf("%lf", &c);
-
-	printf("\nEquação = ");
-	printf("ax² + bx + c\n");
 
 	delta = pow(b,2) - (4 * a * c);
 	printf("\nFórmula do Delta: \n");
@@ -327,7 +327,7 @@ void menu_3(){
 		menu_3(); //chama a função void menu_3
 		break;
 	case 3:
-        tang(); //chama a função void tang
+                tang(); //chama a função void tang
 		menu_3(); //chama a função void menu_3
 		break;
 	case 4:
@@ -461,6 +461,6 @@ void menu(){
 	}
 }
 int main(){
-    menu(); //chama a função void menu
+	menu(); //chama a função void menu
     return 0;
 }
