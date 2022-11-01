@@ -426,27 +426,27 @@ void menu(){
 		break;
 	case 2:
 		subtracao(); //chama a função void subtracao
-		menu(); //chama a função void menu
+		menu(); 
 		break;
 	case 3:
 		divisao(); //chama a função void divisao
-		menu(); //chama a função void menu
+		menu(); 
 		break;
 	case 4:
 		multiplicacao(); //chama a função void multiplicacao
-		menu(); //chama a função void menu
+		menu(); 
 		break;
 	case 5:
 	        radiciacao(); //chama a função void radiciacao
-	        menu(); //chama a função void menu
+	        menu(); 
 	        break;
 	case 6:
 		potenciacao(); //chama a função void potenciacao
-		menu(); //chama a função void menu
+		menu(); 
 		break;
 	case 7:
 		media(); //chama a função void media
-		menu(); //chama a função void menu
+		menu(); 
 		break;
 	case 8:
 		menu_2(); //chama a função void menu_2
@@ -457,7 +457,7 @@ void menu(){
 		break;
 	default:
 		printf("Opção Inválida!!\n");
-		menu(); //chama a função void menu
+		menu();
 		break;
 	}
 }
